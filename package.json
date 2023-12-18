@@ -1,0 +1,20 @@
+{
+	"name": "vue-turborepo-boilerplate",
+	"private": true,
+	"scripts": {
+		"build": "turbo build",
+		"dev": "turbo dev",
+		"lint": "turbo lint && bunx @biomejs/biome check ./ --apply",
+		"format": "bunx @biomejs/biome format ./ --write"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.4.1",
+		"@repo/typescript-config": "*",
+		"turbo": "latest"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"packageManager": "bun@1.0.17",
+	"workspaces": ["apps/*", "packages/*"]
+}
