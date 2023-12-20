@@ -46,7 +46,7 @@ export default function <T extends ZodTypeAny>(
 		return errors
 	}
 
-	const scrolltoError = (selector = '.is-error', options = { offset: 0 }) => {
+	const scrollToError = (selector = '.is-error', options = { offset: 0 }) => {
 		const element = document.querySelector(selector)
 
 		if (element) {
@@ -63,11 +63,11 @@ export default function <T extends ZodTypeAny>(
 	}
 
 	const getError = (path: string) =>
-		get(errors.value, `${path.replace(/./g, ',')}.0.message`)
+		get(errors.value, `${path.replace(/\./g, ',')}.0.message`)
 
 	if (opts.mode === 'eager') {
 		validationWatch()
 	}
 
-	return { validate, errors, isValid, clearErrors, getError, scrolltoError }
+	return { validate, errors, isValid, clearErrors, getError, scrollToError }
 }
