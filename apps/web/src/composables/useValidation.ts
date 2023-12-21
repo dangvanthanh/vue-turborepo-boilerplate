@@ -2,7 +2,7 @@ import { get, groupBy } from 'lodash-es'
 import { type MaybeRefOrGetter, ref, toValue, watch } from 'vue'
 import { type ZodTypeAny, z } from 'zod'
 
-export default function <T extends ZodTypeAny>(
+export default function useValidation<T extends ZodTypeAny>(
 	schema: T,
 	data: MaybeRefOrGetter<Record<string, unknown>>,
 	options?: { mode: 'eager' | 'lazy' },
