@@ -1,12 +1,11 @@
 import Cookies from 'js-cookie'
 
 export interface CookieOptions {
-	expires?: number | Date | undefined
-	path?: string | undefined
-	domain?: string | undefined
-	secure?: boolean | undefined
-	sameSite?: 'lax' | 'strict' | 'none' | undefined
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+	expires?: number | Date
+	path?: string
+	domain?: string
+	secure?: boolean
+	sameSite?: 'lax' | 'strict' | 'none'
 	[property: string]: any
 }
 
