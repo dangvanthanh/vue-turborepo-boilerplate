@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import { useMonitorSize } from '../composables'
+import { useCounterStore } from '../store'
 
 defineProps<{ msg: string }>()
 
 const sizes = useMonitorSize()
-const count = ref(0)
+const store = useCounterStore()
 </script>
 
 <template>
@@ -16,7 +16,8 @@ const count = ref(0)
     <h2>Device: {{ sizes.deviceWidth }} pixels</h2>
   </div>
   <div class="card">
-    <button type="button" @click="count++">Count is {{ count }}</button>
+    <p>Counter is {{ store.count }} - Double is {{ store.doubleCount }}</p>
+    <button type="button" @click="store.increment()">Increment</button>
   </div>
 </template>
 

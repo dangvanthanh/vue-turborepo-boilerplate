@@ -11,7 +11,9 @@
 		"format": "bunx @biomejs/biome format ./src --write"
 	},
 	"dependencies": {
+		"date-fns": "^3.0.6",
 		"lodash-es": "^4.17.21",
+		"pinia": "^2.1.7",
 		"vue": "^3.3.11",
 		"zod": "^3.22.4"
 	},

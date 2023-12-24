@@ -8,7 +8,6 @@ export default function useValidation<T extends ZodTypeAny>(
 	options?: { mode: 'eager' | 'lazy' },
 ) {
 	const opts = Object.assign({}, { mode: 'lazy' }, options)
-
 	const isValid = ref(true)
 	const errors = ref<Record<string, z.ZodIssue[]> | null>(null)
 
