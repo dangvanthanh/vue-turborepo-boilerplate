@@ -11,12 +11,16 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.4.1",
 		"@repo/typescript-config": "*",
-		"turbo": "latest",
-		"husky": "^8.0.0"
+		"husky": "^8.0.0",
+		"lint-staged": "^15.2.0",
+		"turbo": "latest"
 	},
 	"engines": {
 		"node": ">=18"
 	},
 	"packageManager": "bun@1.0.17",
-	"workspaces": ["apps/*", "packages/*"]
+	"workspaces": ["apps/*", "packages/*"],
+	"lint-staged": {
+		"*.{js,ts}": ["bun run lint", "bun run format"]
+	}
 }
