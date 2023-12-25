@@ -1,20 +1,22 @@
 {
-  "name": "vue-turborepo-boilerplate",
-  "private": true,
-  "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "turbo format"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.4.1",
-    "@repo/typescript-config": "*",
-    "turbo": "latest"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "packageManager": "bun@1.0.17",
-  "workspaces": ["apps/*", "packages/*"]
+	"name": "vue-turborepo-boilerplate",
+	"private": true,
+	"scripts": {
+		"build": "turbo build",
+		"dev": "turbo dev",
+		"lint": "turbo lint",
+		"format": "turbo format",
+		"prepare": "husky install"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.4.1",
+		"@repo/typescript-config": "*",
+		"turbo": "latest",
+		"husky": "^8.0.0"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"packageManager": "bun@1.0.17",
+	"workspaces": ["apps/*", "packages/*"]
 }
