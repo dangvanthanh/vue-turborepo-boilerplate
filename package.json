@@ -1,26 +1,26 @@
 {
-	"name": "vue-turborepo-boilerplate",
-	"private": true,
-	"scripts": {
-		"build": "turbo build",
-		"dev": "turbo dev",
-		"lint": "turbo lint",
-		"format": "turbo format",
-		"prepare": "husky install"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.4.1",
-		"@repo/typescript-config": "*",
-		"husky": "^8.0.0",
-		"lint-staged": "^15.2.0",
-		"turbo": "latest"
-	},
-	"engines": {
-		"node": ">=18"
-	},
-	"packageManager": "bun@1.0.17",
-	"workspaces": ["apps/*", "packages/*"],
-	"lint-staged": {
-		"*.{js,ts}": ["bun run lint", "bun run format"]
-	}
+  "name": "vue-turborepo-boilerplate",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "turbo format",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.4.1",
+    "@repo/typescript-config": "*",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.0",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "bun@1.0.17",
+  "workspaces": ["apps/*", "packages/*"],
+  "lint-staged": {
+    "*.{js,ts}": ["bun run lint", "bun run format"]
+  }
 }
