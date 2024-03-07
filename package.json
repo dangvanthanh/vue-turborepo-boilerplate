@@ -6,13 +6,17 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "turbo format",
+    "update": "turbo update",
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.4.1",
+    "@biomejs/biome": "1.5.3",
     "@repo/typescript-config": "*",
-    "husky": "^8.0.0",
-    "lint-staged": "^15.2.0",
+    "@types/node": "^20.11.25",
+    "autoprefixer": "^10.4.18",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "tailwindcss": "^3.4.1",
     "turbo": "latest"
   },
   "engines": {

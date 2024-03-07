@@ -12,6 +12,9 @@
 		"format": {
 			"dependsOn": ["^format"]
 		},
+		"update": {
+			"dependsOn": ["^update"]
+		},
 		"dev": {
 			"cache": false,
 			"persistent": true
