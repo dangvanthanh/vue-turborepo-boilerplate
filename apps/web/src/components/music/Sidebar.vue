@@ -13,7 +13,7 @@ defineProps<SidebarProps>()
 
 <template>
   <div :class="cn('pb-12', $attrs.class ?? '')">
-    <div class="space-y-4 py-4 h-full">
+    <div class="space-y-4 py-4">
       <div class="px-3 py-2">
         <h2 class="mb-2 px-4 text-lg font-semibold tracking-tight">
           Discover

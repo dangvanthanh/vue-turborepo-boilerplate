@@ -16,12 +16,12 @@ import { PlusCircle as PlusCircledIcon } from "lucide-vue-next";
 <template>
   <div class="flex flex-col h-screen">
     <Menu />
-    <div class="border-t h-full">
-      <div class="bg-background h-full">
-        <div class="grid h-full lg:grid-cols-5">
+    <div class="border-t">
+      <div class="bg-background">
+        <div class="grid lg:grid-cols-5">
           <Sidebar :playlists="playlists" class="hidden lg:block" />
           <div class="col-span-3 lg:col-span-4 lg:border-l">
-            <div class="h-full px-4 py-6 lg:px-8">
+            <div class="px-4 py-6 lg:px-8">
               <Tabs default-value="music" class="h-full space-y-6">
                 <div class="space-between flex items-center">
                   <TabsList>
