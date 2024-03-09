@@ -1,43 +1,43 @@
 {
-  "name": "web",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite --port 3000",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "bunx @biomejs/biome check ./src --apply",
-    "format": "bunx @biomejs/biome format ./src --write",
-    "update": "bunx npm-check-updates --ui"
-  },
-  "dependencies": {
-    "@vee-validate/zod": "^4.12.5",
-    "@vueuse/core": "^10.9.0",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.0",
-    "date-fns": "^3.3.1",
-    "embla-carousel": "^8.0.0",
-    "embla-carousel-vue": "^8.0.0",
-    "lodash-es": "^4.17.21",
-    "lucide-vue-next": "^0.349.0",
-    "pinia": "^2.1.7",
-    "radix-vue": "^1.5.0",
-    "tailwind-merge": "^2.2.1",
-    "tailwindcss-animate": "^1.0.7",
-    "v-calendar": "next",
-    "vee-validate": "^4.12.5",
-    "vue": "^3.4.21",
-    "vue-sonner": "^1.1.2",
-    "zod": "^3.22.4"
-  },
-  "devDependencies": {
-    "@repo/lib": "0.0.0",
-    "@biomejs/biome": "1.5.3",
-    "@types/lodash-es": "^4.17.12",
-    "@vitejs/plugin-vue": "^5.0.4",
-    "typescript": "^5.4.2",
-    "vite": "^5.1.5",
-    "vue-tsc": "^2.0.5"
-  }
+	"name": "web",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"lint": "bunx @biomejs/biome check ./src --apply",
+		"format": "bunx @biomejs/biome format ./src --write",
+		"update": "bunx npm-check-updates --ui"
+	},
+	"dependencies": {
+		"@vee-validate/zod": "^4.12.5",
+		"@vueuse/core": "^10.9.0",
+		"class-variance-authority": "^0.7.0",
+		"clsx": "^2.1.0",
+		"date-fns": "^3.3.1",
+		"embla-carousel": "^8.0.0",
+		"embla-carousel-vue": "^8.0.0",
+		"lodash-es": "^4.17.21",
+		"lucide-vue-next": "^0.352.0",
+		"pinia": "^2.1.7",
+		"radix-vue": "^1.5.0",
+		"tailwind-merge": "^2.2.1",
+		"tailwindcss-animate": "^1.0.7",
+		"v-calendar": "next",
+		"vee-validate": "^4.12.5",
+		"vue": "^3.4.21",
+		"vue-sonner": "^1.1.2",
+		"zod": "^3.22.4"
+	},
+	"devDependencies": {
+		"@repo/lib": "0.0.0",
+		"@biomejs/biome": "1.6.0",
+		"@types/lodash-es": "^4.17.12",
+		"@vitejs/plugin-vue": "^5.0.4",
+		"typescript": "^5.4.2",
+		"vite": "^5.1.5",
+		"vue-tsc": "^2.0.5"
+	}
 }
