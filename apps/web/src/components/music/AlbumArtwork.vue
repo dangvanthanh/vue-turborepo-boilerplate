@@ -1,27 +1,27 @@
 <script setup lang="ts">
+import {
+	ContextMenu,
+	ContextMenuContent,
+	ContextMenuItem,
+	ContextMenuSeparator,
+	ContextMenuSub,
+	ContextMenuSubContent,
+	ContextMenuSubTrigger,
+	ContextMenuTrigger,
+} from '@/components/ui/context-menu'
 import type { Album } from '@/data/albums'
 import { playlists } from '@/data/playlists'
-import {PlusCircle as PlusCircledIcon} from 'lucide-vue-next'
 import { cn } from '@/lib/utils'
-import {
-  ContextMenu,
-  ContextMenuContent,
-  ContextMenuItem,
-  ContextMenuSeparator,
-  ContextMenuSub,
-  ContextMenuSubContent,
-  ContextMenuSubTrigger,
-  ContextMenuTrigger,
-} from '@/components/ui/context-menu'
+import { PlusCircle as PlusCircledIcon } from 'lucide-vue-next'
 
 interface AlbumArtworkProps {
-  album: Album
-  aspectRatio?: 'portrait' | 'square'
-  width?: number
-  height?: number
+	album: Album
+	aspectRatio?: 'portrait' | 'square'
+	width?: number
+	height?: number
 }
 withDefaults(defineProps<AlbumArtworkProps>(), {
-  aspectRatio: 'portrait',
+	aspectRatio: 'portrait',
 })
 </script>
 

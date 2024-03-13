@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import AlbumArtwork from "./music/AlbumArtwork.vue";
-import Menu from "./music/Menu.vue";
-import PodcastEmptyPlaceholder from "./music/PodcastEmptyPlaceholder.vue";
-import Sidebar from "./music/Sidebar.vue";
+import AlbumArtwork from './music/AlbumArtwork.vue'
+import Menu from './music/Menu.vue'
+import PodcastEmptyPlaceholder from './music/PodcastEmptyPlaceholder.vue'
+import Sidebar from './music/Sidebar.vue'
 
-import { listenNowAlbums, madeForYouAlbums } from "@/data/albums";
-import { playlists } from "@/data/playlists";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { PlusCircle as PlusCircledIcon } from "lucide-vue-next";
+import { Button } from '@/components/ui/button'
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
+import { Separator } from '@/components/ui/separator'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { listenNowAlbums, madeForYouAlbums } from '@/data/albums'
+import { playlists } from '@/data/playlists'
+import { PlusCircle as PlusCircledIcon } from 'lucide-vue-next'
 </script>
 
 <template>

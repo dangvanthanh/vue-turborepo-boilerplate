@@ -1,6 +1,6 @@
 import { get, groupBy } from 'lodash-es'
 import { type MaybeRefOrGetter, ref, toValue, watch } from 'vue'
-import { type ZodTypeAny, z } from 'zod'
+import type { ZodTypeAny, z } from 'zod'
 
 export default function useValidation<T extends ZodTypeAny>(
 	schema: T,

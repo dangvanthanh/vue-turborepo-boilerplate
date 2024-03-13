@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import type { Playlist } from '@/data/playlists'
-import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import { ScrollArea } from '@/components/ui/scroll-area'
+import type { Playlist } from '@/data/playlists'
+import { cn } from '@/lib/utils'
 
 interface SidebarProps {
-  playlists: Playlist[]
+	playlists: Playlist[]
 }
 
 defineProps<SidebarProps>()

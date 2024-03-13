@@ -4,23 +4,27 @@ import { z } from 'zod'
 import { useValidation } from '../composables'
 
 const validationSchema = z.object({
-  name: z.string().min(1, 'Name is required'),
-  email: z.string().email('Please enter a valid email address'),
+	name: z.string().min(1, 'Name is required'),
+	email: z.string().email('Please enter a valid email address'),
 })
 
 const form = ref({ name: '', email: '' })
 
-const { validate, errors, isValid, getError, scrollToError } = useValidation(validationSchema, form, { mode: 'lazy' })
+const { validate, errors, isValid, getError, scrollToError } = useValidation(
+	validationSchema,
+	form,
+	{ mode: 'lazy' },
+)
 
 const handleSubmit = async () => {
-  await validate()
+	await validate()
 
-  if (isValid.value) {
-    console.log('Form is validation!')
-  } else {
-    console.error('Form is invalid!')
-    scrollToError()
-  }
+	if (isValid.value) {
+		console.log('Form is validation!')
+	} else {
+		console.error('Form is invalid!')
+		scrollToError()
+	}
 }
 </script>
 

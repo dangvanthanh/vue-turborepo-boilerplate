@@ -1,14 +1,21 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from 'vue'
-import { PinInputRoot, type PinInputRootEmits, type PinInputRootProps, useForwardPropsEmits } from 'radix-vue'
 import { cn } from '@/lib/utils'
+import {
+	PinInputRoot,
+	type PinInputRootEmits,
+	type PinInputRootProps,
+	useForwardPropsEmits,
+} from 'radix-vue'
+import { type HTMLAttributes, computed } from 'vue'
 
-const props = defineProps<PinInputRootProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+	PinInputRootProps & { class?: HTMLAttributes['class'] }
+>()
 const emits = defineEmits<PinInputRootEmits>()
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-  return delegated
+	const { class: _, ...delegated } = props
+	return delegated
 })
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
