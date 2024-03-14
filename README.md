@@ -10,6 +10,7 @@ This turborepo uses [bun](https://bun.sh) as a package manager. It includes the 
 
 - `web` - Vue 3 app with port is `3000`
 - `@repo/lib` - Adapter for 3rd party 
+- `@repo/biome-config` - Biome config for the repo
 - `@repo/typescript-config` - TypeScript config for the repo
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
@@ -20,6 +21,7 @@ This Turborepo has some additional tools already setup for you:
 
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [Biomejs](https://biomejs.dev) for code linting and formatting
+- [Shadcn-vue](https://www.shadcn-vue.com) - Beautifully designed components
 
 ### Build
 
