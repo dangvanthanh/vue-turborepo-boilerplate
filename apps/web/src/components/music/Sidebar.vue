@@ -4,7 +4,7 @@ import type { Playlist } from '@/data/playlists'
 import { cn } from '@/lib/utils'
 
 interface SidebarProps {
-  playlists: Playlist[]
+	playlists: Playlist[]
 }
 
 defineProps<SidebarProps>()
