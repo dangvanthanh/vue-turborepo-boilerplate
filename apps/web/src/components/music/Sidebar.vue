@@ -4,14 +4,14 @@ import type { Playlist } from '@/data/playlists'
 import { cn } from '@/lib/utils'
 
 interface SidebarProps {
-	playlists: Playlist[]
+  playlists: Playlist[]
 }
 
 defineProps<SidebarProps>()
 </script>
 
 <template>
-  <div :class="cn('pb-12', $attrs.class ?? '')">
+  <div :class="cn($attrs.class ?? '')">
     <div class="space-y-4 py-4">
       <div class="px-3 py-2">
         <h2 class="mb-2 px-4 text-lg font-semibold tracking-tight">

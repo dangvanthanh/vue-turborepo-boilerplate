@@ -14,15 +14,15 @@ import { PlusCircle as PlusCircledIcon } from 'lucide-vue-next'
 </script>
 
 <template>
-  <div class="flex flex-col h-screen overflow-hidden">
+  <div class="flex flex-col h-screen">
     <Menu />
     <div class="border-t">
       <div class="bg-background">
         <div class="grid lg:grid-cols-5">
-          <ScrollArea class="h-[calc(100vh-40px)]">
+          <ScrollArea class="lg:h-[calc(100vh-41px)]">
             <Sidebar :playlists="playlists" class="hidden lg:block" />
           </ScrollArea>
-          <ScrollArea class="col-span-3 lg:col-span-4 lg:border-l h-[calc(100vh-40px)]">
+          <ScrollArea class="col-span-3 lg:col-span-4 lg:border-l h-[calc(100vh-41px)]">
             <div class="px-4 py-6 lg:px-8">
               <Tabs default-value="music" class="h-full space-y-6">
                 <div class="space-between flex items-center">
