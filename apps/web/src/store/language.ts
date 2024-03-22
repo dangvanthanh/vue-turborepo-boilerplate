@@ -13,6 +13,7 @@ function getLanguageFromCode(languageCode: string) {
 			return enGB
 	}
 }
+
 export const useLanguageStore = defineStore('language', {
 	state: () => ({
 		language: {},

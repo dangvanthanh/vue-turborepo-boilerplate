@@ -1,24 +1,24 @@
 {
-	"name": "@repo/lib",
-	"version": "0.0.0",
-	"private": true,
-	"main": "./dist/index.js",
-	"module": "./dist/index.mjs",
-	"types": "./dist/index.d.ts",
-	"scripts": {
-		"build": "tsup",
-		"dev": "tsup --watch",
-		"format": "bunx @biomejs/biome format ./src --write",
-		"update": "bunx npm-check-updates --ui"
-	},
-	"license": "MIT",
-	"dependencies": {
-		"js-cookie": "^3.0.5"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.6.1",
-		"@types/js-cookie": "^3.0.6",
-		"tsup": "^8.0.2",
-		"typescript": "^5.4.2"
-	}
+  "name": "@repo/lib",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "format": "bunx @biomejs/biome format ./src --write",
+    "update": "bunx npm-check-updates -ui"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "js-cookie": "^3.0.5"
+  },
+  "devDependencies": {
+    "@repo/biome-config": "workspace:*",
+    "@types/js-cookie": "^3.0.6",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.3"
+  }
 }

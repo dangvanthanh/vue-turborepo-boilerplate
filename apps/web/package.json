@@ -9,10 +9,10 @@
 		"preview": "vite preview",
 		"lint": "bunx @biomejs/biome check ./src --apply",
 		"format": "bunx @biomejs/biome format ./src --write",
-		"update": "bunx npm-check-updates --ui"
+		"update": "bunx npm-check-updates -ui"
 	},
 	"dependencies": {
-		"@repo/lib": "0.0.0",
+		"@repo/lib": "workspace:*",
 		"@vee-validate/zod": "^4.12.6",
 		"@vueuse/core": "^10.9.0",
 		"class-variance-authority": "^0.7.0",
@@ -21,7 +21,7 @@
 		"embla-carousel": "^8.0.0",
 		"embla-carousel-vue": "^8.0.0",
 		"lodash-es": "^4.17.21",
-		"lucide-vue-next": "^0.359.0",
+		"lucide-vue-next": "^0.362.0",
 		"pinia": "^2.1.7",
 		"radix-vue": "^1.5.3",
 		"tailwind-merge": "^2.2.2",
@@ -33,11 +33,11 @@
 		"zod": "^3.22.4"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.6.1",
+    "@repo/biome-config": "workspace:*",
 		"@types/lodash-es": "^4.17.12",
 		"@vitejs/plugin-vue": "^5.0.4",
-		"typescript": "^5.4.2",
-		"vite": "^5.1.6",
-		"vue-tsc": "^2.0.6"
+		"typescript": "^5.4.3",
+		"vite": "^5.2.2",
+		"vue-tsc": "^2.0.7"
 	}
 }
