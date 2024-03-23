@@ -21,7 +21,7 @@
 		"embla-carousel": "^8.0.0",
 		"embla-carousel-vue": "^8.0.0",
 		"lodash-es": "^4.17.21",
-		"lucide-vue-next": "^0.362.0",
+		"lucide-vue-next": "^0.363.0",
 		"pinia": "^2.1.7",
 		"radix-vue": "^1.5.3",
 		"tailwind-merge": "^2.2.2",
@@ -37,7 +37,7 @@
 		"@types/lodash-es": "^4.17.12",
 		"@vitejs/plugin-vue": "^5.0.4",
 		"typescript": "^5.4.3",
-		"vite": "^5.2.2",
+		"vite": "^5.2.3",
 		"vue-tsc": "^2.0.7"
 	}
 }
