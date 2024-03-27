@@ -1,15 +1,16 @@
 import Cookies from 'js-cookie'
 
-export interface CookieOptions {
+export type CookieOptions = {
 	expires?: number | Date
 	path?: string
 	domain?: string
 	secure?: boolean
 	sameSite?: 'lax' | 'strict' | 'none'
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	[property: string]: any
 }
 
-export default class CookiesAdapter {
+export class CookiesAdapter {
 	cookies
 
 	constructor() {

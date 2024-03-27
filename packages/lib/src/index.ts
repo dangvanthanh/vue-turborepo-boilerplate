@@ -1,4 +1,3 @@
-import CookiesAdapter from './adapters/CookiesAdapter'
-import CookieOptions from './adapters/CookiesAdapter'
+import { type CookieOptions, CookiesAdapter } from './adapters/cookies-adapter'
 
-export { CookiesAdapter, CookieOptions }
+export { CookiesAdapter, type CookieOptions }
