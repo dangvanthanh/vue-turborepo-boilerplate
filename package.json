@@ -11,11 +11,11 @@
   "devDependencies": {
     "@repo/biome-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "^20.11.30",
+    "@types/node": "^20.12.4",
     "autoprefixer": "^10.4.19",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.3",
     "turbo": "latest"
   },
   "engines": {

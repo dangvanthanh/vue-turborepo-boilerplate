@@ -20,6 +20,6 @@
 		"@repo/biome-config": "workspace:*",
 		"@types/js-cookie": "^3.0.6",
 		"tsup": "^8.0.2",
-		"typescript": "^5.4.3"
+		"typescript": "^5.4.4"
 	}
 }
