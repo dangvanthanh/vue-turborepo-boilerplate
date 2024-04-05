@@ -21,7 +21,7 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "bun@1.0.30",
+  "packageManager": "bun@1.1.1",
   "workspaces": ["apps/*", "packages/*"],
   "lint-staged": {
     "*.{js,ts,vue}": ["bun run lint", "bun run format"]
