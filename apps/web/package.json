@@ -21,23 +21,23 @@
 		"embla-carousel": "^8.0.2",
 		"embla-carousel-vue": "^8.0.2",
 		"lodash-es": "^4.17.21",
-		"lucide-vue-next": "^0.373.0",
+		"lucide-vue-next": "^0.377.0",
 		"pinia": "^2.1.7",
-		"radix-vue": "^1.7.2",
+		"radix-vue": "^1.7.3",
 		"tailwind-merge": "^2.3.0",
 		"tailwindcss-animate": "^1.0.7",
 		"v-calendar": "next",
 		"vee-validate": "^4.12.6",
-		"vue": "^3.4.25",
+		"vue": "^3.4.26",
 		"vue-sonner": "^1.1.2",
-		"zod": "^3.23.4"
+		"zod": "^3.23.5"
 	},
 	"devDependencies": {
     "@repo/biome-config": "workspace:*",
 		"@types/lodash-es": "^4.17.12",
 		"@vitejs/plugin-vue": "^5.0.4",
 		"typescript": "^5.4.5",
-		"vite": "^5.2.10",
-		"vue-tsc": "^2.0.14"
+		"vite": "^5.2.11",
+		"vue-tsc": "^2.0.16"
 	}
 }
