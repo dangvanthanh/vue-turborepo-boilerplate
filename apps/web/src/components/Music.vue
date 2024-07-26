@@ -1,16 +1,22 @@
 <script setup lang="ts">
+import { Button } from '@/components/ui/button'
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
+import { Separator } from '@/components/ui/separator'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import type { Album } from '@/types'
+import { PlusCircle as PlusCircledIcon } from 'lucide-vue-next'
 import AlbumArtwork from './music/AlbumArtwork.vue'
 import Menu from './music/Menu.vue'
 import PodcastEmptyPlaceholder from './music/PodcastEmptyPlaceholder.vue'
 import Sidebar from './music/Sidebar.vue'
 
-import { Button } from '@/components/ui/button'
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
-import { Separator } from '@/components/ui/separator'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { listenNowAlbums, madeForYouAlbums } from '@/data/albums'
-import { playlists } from '@/data/playlists'
-import { PlusCircle as PlusCircledIcon } from 'lucide-vue-next'
+interface Props {
+	listenNowAlbums: Album[]
+	madeForYouAlbums: Album[]
+	playlists: string[]
+}
+
+const { listenNowAlbums, madeForYouAlbums, playlists } = defineProps<Props>()
 </script>
 
 <template>
@@ -55,8 +61,8 @@ import { PlusCircle as PlusCircledIcon } from 'lucide-vue-next'
                   <div class="relative">
                     <ScrollArea>
                       <div class="flex space-x-4 pb-4">
-                        <AlbumArtwork v-for="album in listenNowAlbums" :key="album.name" :album="album" class="w-[250px]"
-                          aspect-ratio="portrait" :width="250" :height="330" />
+                        <AlbumArtwork v-for="album in listenNowAlbums" :key="album.name" :album="album" :playlists="playlists"
+                          class="w-[250px]" aspect-ratio="portrait" :width="250" :height="330" />
                       </div>
                       <ScrollBar orientation="horizontal" />
                     </ScrollArea>
@@ -73,8 +79,8 @@ import { PlusCircle as PlusCircledIcon } from 'lucide-vue-next'
                   <div class="relative">
                     <ScrollArea>
                       <div class="flex space-x-4 pb-4">
-                        <AlbumArtwork v-for="album in madeForYouAlbums" :key="album.name" :album="album" class="w-[150px]"
-                          aspect-ratio="square" :width="150" :height="150" />
+                        <AlbumArtwork v-for="album in madeForYouAlbums" :key="album.name" :album="album" :playlists="playlists"
+                          class="w-[150px]" aspect-ratio="square" :width="150" :height="150" />
                       </div>
                       <ScrollBar orientation="horizontal" />
                     </ScrollArea>

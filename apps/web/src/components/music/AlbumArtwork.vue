@@ -9,9 +9,8 @@ import {
 	ContextMenuSubTrigger,
 	ContextMenuTrigger,
 } from '@/components/ui/context-menu'
-import type { Album } from '@/data/albums'
-import { playlists } from '@/data/playlists'
 import { cn } from '@/lib/utils'
+import type { Album } from '@/types'
 import { PlusCircle as PlusCircledIcon } from 'lucide-vue-next'
 
 interface AlbumArtworkProps {
@@ -19,7 +18,9 @@ interface AlbumArtworkProps {
 	aspectRatio?: 'portrait' | 'square'
 	width?: number
 	height?: number
+	playlists: string[]
 }
+
 withDefaults(defineProps<AlbumArtworkProps>(), {
 	aspectRatio: 'portrait',
 })
@@ -53,7 +54,7 @@ withDefaults(defineProps<AlbumArtworkProps>(), {
               New Playlist
             </ContextMenuItem>
             <ContextMenuSeparator />
-            <ContextMenuItem v-for="playlist in playlists" :key="playlist">
+            <ContextMenuItem v-for="playlist in playlists" :key="(typeof playlists)">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
