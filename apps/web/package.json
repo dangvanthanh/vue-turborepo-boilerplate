@@ -25,9 +25,9 @@
     "embla-carousel": "^8.1.7",
     "embla-carousel-vue": "^8.1.7",
     "lodash-es": "^4.17.21",
-    "lucide-vue-next": "^0.416.0",
+    "lucide-vue-next": "^0.417.0",
     "msw": "^2.3.4",
-    "pinia": "^2.1.7",
+    "pinia": "^2.2.0",
     "radix-vue": "^1.9.2",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
@@ -41,7 +41,7 @@
   "devDependencies": {
     "@repo/biome-config": "workspace:*",
     "@types/lodash-es": "^4.17.12",
-    "@vitejs/plugin-vue": "^5.1.0",
+    "@vitejs/plugin-vue": "^5.1.1",
     "typescript": "^5.5.4",
     "vite": "^5.3.5",
     "vue-tsc": "^2.0.29"
