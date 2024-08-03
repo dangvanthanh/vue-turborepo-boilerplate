@@ -8,25 +8,25 @@ const madeForYouAlbums = ref<Album[]>([])
 const playlists = ref<string[]>([])
 
 onMounted(() => {
-  Promise.all([getListenNowAlbums(), getMadeForYouAlbums(), getPlaylists()])
+	Promise.all([getListenNowAlbums(), getMadeForYouAlbums(), getPlaylists()])
 })
 
 async function getListenNowAlbums() {
-  const res = await fetch('/listen')
-  const json = await res.json()
-  listenNowAlbums.value = json
+	const res = await fetch('/listen')
+	const json = await res.json()
+	listenNowAlbums.value = json
 }
 
 async function getMadeForYouAlbums() {
-  const res = await fetch('/albums')
-  const json = await res.json()
-  madeForYouAlbums.value = json
+	const res = await fetch('/albums')
+	const json = await res.json()
+	madeForYouAlbums.value = json
 }
 
 async function getPlaylists() {
-  const res = await fetch('/playlists')
-  const json = await res.json()
-  playlists.value = json
+	const res = await fetch('/playlists')
+	const json = await res.json()
+	playlists.value = json
 }
 </script>
 
