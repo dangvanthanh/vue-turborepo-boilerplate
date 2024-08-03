@@ -8,7 +8,8 @@
 	"scripts": {
 		"build": "tsup",
 		"dev": "tsup --watch",
-		"format": "bunx @biomejs/biome format ./src --write",
+		"lint": "biome lint ./src",
+		"format": "biome format ./src --write",
 		"update": "bunx npm-check-updates -ui",
 		"check-types": "tsc --noEmit"
 	},
@@ -19,7 +20,7 @@
 	"devDependencies": {
 		"@repo/biome-config": "workspace:*",
 		"@types/js-cookie": "^3.0.6",
-		"tsup": "^8.2.3",
+		"tsup": "^8.2.4",
 		"typescript": "^5.5.4"
 	}
 }
