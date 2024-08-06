@@ -15,7 +15,7 @@ export default function useMonitorSize() {
 	}
 
 	const isMobile = () => {
-		return window.innerWidth <= MOBILE_WIDTH ? true : false
+		return window.innerWidth <= MOBILE_WIDTH
 	}
 
 	onMounted(() => {

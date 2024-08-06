@@ -11,9 +11,14 @@
 		"preview": "vite preview",
 		"lint": "biome lint ./src",
 		"format": "biome format ./src --write",
-		"update": "bunx npm-check-updates -ui"
+		"update": "bunx npm-check-updates -ui",
+		"lingui:extract": "lingui extract --clean",
+		"lingui:compile": "lingui compile"
 	},
 	"dependencies": {
+		"@lingui/cli": "^4.11.2",
+		"@lingui/macro": "^4.11.2",
+		"@lingui/vite-plugin": "^4.11.2",
 		"@repo/lib": "workspace:*",
 		"@unovis/ts": "^1.4.3",
 		"@unovis/vue": "^1.4.3",
@@ -35,15 +40,19 @@
 		"vaul-vue": "^0.2.0",
 		"vee-validate": "^4.13.2",
 		"vue": "^3.4.35",
+		"vue-router": "^4.4.2",
 		"vue-sonner": "^1.1.4",
 		"zod": "^3.23.8"
 	},
 	"devDependencies": {
+		"@lingui/extractor-vue": "^4.11.2",
 		"@repo/biome-config": "workspace:*",
 		"@types/lodash-es": "^4.17.12",
 		"@vitejs/plugin-vue": "^5.1.2",
 		"typescript": "^5.5.4",
+		"unplugin-vue-router": "^0.10.2",
 		"vite": "^5.3.5",
+		"vite-plugin-babel-macros": "^1.0.6",
 		"vue-tsc": "^2.0.29"
 	},
 	"msw": {
