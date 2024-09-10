@@ -2,6 +2,7 @@ import { onMounted, onUnmounted, reactive, toRefs } from 'vue'
 
 export default function useMonitorSize() {
 	const MOBILE_WIDTH = 600
+
 	const sizes = reactive({
 		browserWidth: window.innerWidth,
 		deviceWidth: screen.width,
