@@ -12,17 +12,17 @@
 	"devDependencies": {
 		"@repo/biome-config": "workspace:*",
 		"@repo/typescript-config": "workspace:*",
-		"@types/node": "^22.5.2",
+		"@types/node": "^22.5.5",
 		"autoprefixer": "^10.4.20",
-		"husky": "^9.1.5",
+		"husky": "^9.1.6",
 		"lint-staged": "^15.2.10",
-		"tailwindcss": "^3.4.10",
-		"turbo": "^2.1.1"
+		"tailwindcss": "^3.4.11",
+		"turbo": "^2.1.2"
 	},
 	"engines": {
 		"node": ">=18"
 	},
-	"packageManager": "bun@1.1.26",
+	"packageManager": "bun@1.1.27",
 	"workspaces": ["apps/*", "packages/*"],
 	"lint-staged": {
 		"*.{js,ts,vue}": ["bun run lint", "bun run format"]
