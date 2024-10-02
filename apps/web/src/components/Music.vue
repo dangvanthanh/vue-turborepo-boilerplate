@@ -61,8 +61,8 @@ const { listenNowAlbums, madeForYouAlbums, playlists } = defineProps<Props>()
                   <div class="relative">
                     <ScrollArea>
                       <div class="flex space-x-4 pb-4">
-                        <AlbumArtwork v-for="album in listenNowAlbums" :key="album.name" :album="album" :playlists="playlists"
-                          class="w-[250px]" aspect-ratio="portrait" :width="250" :height="330" />
+                        <AlbumArtwork v-for="album in listenNowAlbums" :key="album.name" :album="album"
+                          :playlists="playlists" class="w-[250px]" aspect-ratio="portrait" :width="250" :height="330" />
                       </div>
                       <ScrollBar orientation="horizontal" />
                     </ScrollArea>
@@ -79,8 +79,8 @@ const { listenNowAlbums, madeForYouAlbums, playlists } = defineProps<Props>()
                   <div class="relative">
                     <ScrollArea>
                       <div class="flex space-x-4 pb-4">
-                        <AlbumArtwork v-for="album in madeForYouAlbums" :key="album.name" :album="album" :playlists="playlists"
-                          class="w-[150px]" aspect-ratio="square" :width="150" :height="150" />
+                        <AlbumArtwork v-for="album in madeForYouAlbums" :key="album.name" :album="album"
+                          :playlists="playlists" class="w-[150px]" aspect-ratio="square" :width="150" :height="150" />
                       </div>
                       <ScrollBar orientation="horizontal" />
                     </ScrollArea>
