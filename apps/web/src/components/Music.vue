@@ -11,13 +11,13 @@ import PodcastEmptyPlaceholder from './music/PodcastEmptyPlaceholder.vue'
 import Sidebar from './music/Sidebar.vue'
 
 interface MusicProps {
-  listenNowAlbums: Album[]
-  madeForYouAlbums: Album[]
-  playlists: string[]
+	listenNowAlbums: Album[]
+	madeForYouAlbums: Album[]
+	playlists: string[]
 }
 
 const { listenNowAlbums, madeForYouAlbums, playlists } =
-  defineProps<MusicProps>()
+	defineProps<MusicProps>()
 </script>
 
 <template>
