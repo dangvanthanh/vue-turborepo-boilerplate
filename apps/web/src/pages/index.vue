@@ -7,22 +7,26 @@ const listenNowAlbums = ref<Album[]>([])
 const madeForYouAlbums = ref<Album[]>([])
 const playlists = ref<string[]>([])
 
-onMounted(async () => {
-	await Promise.all([
-		fetchData('/listen', listenNowAlbums),
-		fetchData('/albums', madeForYouAlbums),
-		fetchData('/playlists', playlists),
-	])
+onMounted(() => {
+  fetchAllData()
 })
 
+async function fetchAllData() {
+  await Promise.all([
+    fetchData('/listen', listenNowAlbums),
+    fetchData('/albums', madeForYouAlbums),
+    fetchData('/playlists', playlists),
+  ])
+}
+
 async function fetchData<T>(url: string, targetRef: Ref<T>): Promise<void> {
-	try {
-		const res = await fetch(url)
-		const json = await res.json()
-		targetRef.value = json
-	} catch (error) {
-		console.error(`Error fetching data from ${url} ${error}`)
-	}
+  try {
+    const res = await fetch(url)
+    const json = await res.json()
+    targetRef.value = json
+  } catch (error) {
+    console.error(`Error fetching data from ${url} ${error}`)
+  }
 }
 </script>
 
