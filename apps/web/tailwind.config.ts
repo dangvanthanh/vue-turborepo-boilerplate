@@ -1,7 +1,7 @@
+import type { Config } from 'tailwindcss'
 import animate from 'tailwindcss-animate'
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
 	darkMode: ['class'],
 	safelist: ['dark'],
 	prefix: '',
@@ -58,20 +58,20 @@ module.exports = {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: { height: 0 },
-					to: { height: 'var(--radix-accordion-content-height)' },
+					from: { h: '0' },
+					to: { h: 'var(--radix-accordion-content-height)' },
 				},
 				'accordion-up': {
-					from: { height: 'var(--radix-accordion-content-height)' },
-					to: { height: 0 },
+					from: { h: 'var(--radix-accordion-content-height)' },
+					to: { h: '' },
 				},
 				'collapsible-down': {
-					from: { height: 0 },
-					to: { height: 'var(--radix-collapsible-content-height)' },
+					from: { h: '0' },
+					to: { h: 'var(--radix-collapsible-content-height)' },
 				},
 				'collapsible-up': {
-					from: { height: 'var(--radix-collapsible-content-height)' },
-					to: { height: 0 },
+					from: { h: 'var(--radix-collapsible-content-height)' },
+					to: { h: '0' },
 				},
 			},
 			animation: {
@@ -83,4 +83,4 @@ module.exports = {
 		},
 	},
 	plugins: [animate],
-}
+} satisfies Config
