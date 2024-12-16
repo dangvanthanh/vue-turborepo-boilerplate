@@ -1,6 +1,6 @@
 # Vue Turborepo Boilerplate
 
-> Starter template or boilerplate using Vue 3, Turborepo and Vite 
+> Starter template or boilerplate using Vue 3, Turborepo and Vite
 
 ## What's inside?
 
@@ -8,7 +8,7 @@ This turborepo uses [bun](https://bun.sh) as a package manager. It includes the 
 
 ### Apps and Packages
 
-- `web` - Vue 3 app with port is `3000`
+- `web` - Vue 3 app with port is `5173`
 - `lib` - Adapter for 3rd party
 - `biome-config` - Biome config for the repo
 - `typescript-config` - TypeScript config for the repo
@@ -28,7 +28,7 @@ This Turborepo has some additional tools already setup for you:
 To build all apps and packages, run the following command:
 
 ```bash
-$ bun run build
+bun run build
 ````
 
 ### Develop
@@ -36,7 +36,7 @@ $ bun run build
 To develop all apps and packages, run the following command:
 
 ```bash
-$ bun run dev
+bun run dev
 ````
 
 ### Remote Caching
@@ -47,7 +47,7 @@ Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo
 By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
 
 ```bash
-$ npx turbo login
+npx turbo login
 ````
 
 This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
@@ -55,7 +55,7 @@ This will authenticate the Turborepo CLI with your [Vercel account](https://verc
 Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
 
 ```bash
-$ npx turbo link
+npx turbo link
 ````
 
 ## License

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import AutoFormLabel from './AutoFormLabel.vue'
-import { beautifyObjectName } from './utils'
 import type { FieldProps } from './interface'
 import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import AutoFormLabel from './AutoFormLabel.vue'
+import { beautifyObjectName } from './utils'
 
 defineOptions({
   inheritAttrs: false,

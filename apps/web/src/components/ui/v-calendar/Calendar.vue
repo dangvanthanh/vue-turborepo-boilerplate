@@ -1,12 +1,12 @@
 <script setup lang="ts">
+import type { Calendar } from 'v-calendar'
+import { buttonVariants } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
 import { useVModel } from '@vueuse/core'
 import { ChevronLeft, ChevronRight } from 'lucide-vue-next'
-import type { Calendar } from 'v-calendar'
 import { DatePicker } from 'v-calendar'
 import { computed, nextTick, onMounted, ref, useSlots } from 'vue'
 import { isVCalendarSlot } from '.'
-import { cn } from '@/lib/utils'
-import { buttonVariants } from '@/components/ui/button'
 
 /* Extracted from v-calendar */
 type DatePickerModel = DatePickerDate | DatePickerRangeObject
@@ -79,10 +79,22 @@ const vCalendarSlots = computed(() => {
 <template>
   <div class="relative">
     <div v-if="$attrs.mode !== 'time'" class="absolute flex justify-between w-full px-4 top-3 z-[1]">
-      <button :class="cn(buttonVariants({ variant: 'outline' }), 'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100')" @click="handleNav('prev')">
+      <button
+        :class="cn(
+          buttonVariants({ variant: 'outline' }),
+          'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
+        )"
+        @click="handleNav('prev')"
+      >
         <ChevronLeft class="w-4 h-4" />
       </button>
-      <button :class="cn(buttonVariants({ variant: 'outline' }), 'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100')" @click="handleNav('next')">
+      <button
+        :class="cn(
+          buttonVariants({ variant: 'outline' }),
+          'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
+        )"
+        @click="handleNav('next')"
+      >
         <ChevronRight class="w-4 h-4" />
       </button>
     </div>

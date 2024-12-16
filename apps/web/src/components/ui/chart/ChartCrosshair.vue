@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { VisCrosshair, VisTooltip } from '@unovis/vue'
 import type { BulletLegendItemInterface } from '@unovis/ts'
 import { omit } from '@unovis/ts'
+import { VisCrosshair, VisTooltip } from '@unovis/vue'
 import { type Component, createApp } from 'vue'
 import { ChartTooltip } from '.'
 
@@ -34,7 +34,7 @@ function template(d: any) {
 }
 
 function color(d: unknown, i: number) {
-  return props.colors[i] ?? 'transparent'
+  return props.colors[i] ?? 'transparent';
 }
 </script>
 

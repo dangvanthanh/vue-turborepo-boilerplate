@@ -31,7 +31,7 @@
 		"embla-carousel-vue": "^8.5.1",
 		"lodash-es": "^4.17.21",
 		"lucide-vue-next": "^0.468.0",
-		"msw": "^2.6.8",
+		"msw": "^2.6.9",
 		"pinia": "^2.3.0",
 		"radix-vue": "^1.9.11",
 		"tailwind-merge": "^2.5.5",
