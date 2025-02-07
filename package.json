@@ -12,15 +12,15 @@
 	"devDependencies": {
 		"@repo/biome-config": "workspace:*",
 		"@repo/typescript-config": "workspace:*",
-		"@types/node": "^22.10.2",
+		"@types/node": "^22.13.1",
 		"husky": "^9.1.7",
-		"lint-staged": "^15.2.11",
-		"turbo": "^2.3.3"
+		"lint-staged": "^15.4.3",
+		"turbo": "^2.4.0"
 	},
 	"engines": {
 		"node": ">=18"
 	},
-	"packageManager": "bun@1.1.38",
+	"packageManager": "bun@1.2.2",
 	"workspaces": ["apps/*", "packages/*"],
 	"lint-staged": {
 		"*.{js,ts,vue}": ["bun run lint", "bun run format"]

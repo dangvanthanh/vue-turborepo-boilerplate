@@ -1,0 +1,12 @@
+{
+	"name": "api",
+	"version": "0.0.0",
+	"scripts": {
+		"dev": "deno task start",
+		"lint": "biome lint ./main.ts",
+		"format": "biome format ./main.ts --write"
+	},
+	"devDependencies": {
+		"@repo/biome-config": "workspace:*"
+	}
+}

@@ -47,7 +47,7 @@ const { listenNowAlbums, madeForYouAlbums, playlists } =
                     </Button>
                   </div>
                 </div>
-                <TabsContent value="music" class="border-none p-0 outline-none">
+                <TabsContent value="music" class="border-none p-0 outline-hidden">
                   <div class="flex items-center justify-between">
                     <div class="space-y-1">
                       <h2 class="text-2xl font-semibold tracking-tight">
