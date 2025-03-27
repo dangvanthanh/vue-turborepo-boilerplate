@@ -1,35 +1,41 @@
 <script setup lang="ts">
 import Music from '@/components/Music.vue'
-import type { Album } from '@/types'
-import { type Ref, onMounted, ref } from 'vue'
-
-const listenNowAlbums = ref<Album[]>([])
-const madeForYouAlbums = ref<Album[]>([])
-const playlists = ref<string[]>([])
-
-onMounted(() => {
-	fetchAllData()
-})
+import useSWRV from 'swrv'
 
 async function fetchAllData() {
-	await Promise.all([
-		fetchData('/listen', listenNowAlbums),
-		fetchData('/albums', madeForYouAlbums),
-		fetchData('/playlists', playlists),
-	])
-}
-
-async function fetchData<T>(url: string, targetRef: Ref<T>): Promise<void> {
 	try {
-		const res = await fetch(url)
-		const json = await res.json()
-		targetRef.value = json
+		const responses = await Promise.all([
+			fetch('/listen'),
+			fetch('/albums'),
+			fetch('/playlists'),
+		])
+
+		responses.forEach((response, _) => {
+			if (!response.ok) {
+				throw new Error(`HTTP error! status: ${response.status}`)
+			}
+		})
+
+		const [listenNowAlbums, madeForYouAlbums, playlists] = await Promise.all(
+			responses.map((response) => response.json()),
+		)
+
+		return [listenNowAlbums, madeForYouAlbums, playlists]
 	} catch (error) {
-		console.error(`Error fetching data from ${url} ${error}`)
+		console.error('Error fetching data:', error)
+		throw error
 	}
 }
+
+const { data } = useSWRV(
+	() => 'collection',
+	() => fetchAllData(),
+)
 </script>
 
 <template>
-  <Music :listenNowAlbums="listenNowAlbums" :madeForYouAlbums="madeForYouAlbums" :playlists="playlists" />
+	<div v-if="data">
+		<Music :listenNowAlbums="data[0]" :madeForYouAlbums="data[1]" :playlists="data[2]" />
+	</div>
+
 </template>

@@ -27,7 +27,7 @@ withDefaults(defineProps<AlbumArtworkProps>(), {
 </script>
 
 <template>
-  <div :class="cn('space-y-3', $attrs.class ?? '')">
+  <div :class="cn($attrs.class ?? '')">
     <ContextMenu>
       <ContextMenuTrigger>
         <div class="overflow-hidden rounded-md">
@@ -80,11 +80,11 @@ withDefaults(defineProps<AlbumArtworkProps>(), {
         <ContextMenuItem>Share</ContextMenuItem>
       </ContextMenuContent>
     </ContextMenu>
-    <div class="space-y-1 text-sm">
+    <div class="mt-3 text-sm">
       <h3 class="font-medium leading-none">
         {{ album.name }}
       </h3>
-      <p class="text-xs text-muted-foreground">
+      <p class="mt-1 text-xs text-muted-foreground">
         {{ album.artist }}
       </p>
     </div>
