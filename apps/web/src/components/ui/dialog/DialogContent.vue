@@ -2,23 +2,25 @@
 import { cn } from '@/lib/utils'
 import { X } from 'lucide-vue-next'
 import {
-  DialogClose,
-  DialogContent,
-  type DialogContentEmits,
-  type DialogContentProps,
-  DialogOverlay,
-  DialogPortal,
-  useForwardPropsEmits,
+	DialogClose,
+	DialogContent,
+	type DialogContentEmits,
+	type DialogContentProps,
+	DialogOverlay,
+	DialogPortal,
+	useForwardPropsEmits,
 } from 'radix-vue'
 import { computed, type HTMLAttributes } from 'vue'
 
-const props = defineProps<DialogContentProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+	DialogContentProps & { class?: HTMLAttributes['class'] }
+>()
 const emits = defineEmits<DialogContentEmits>()
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+	const { class: _, ...delegated } = props
 
-  return delegated
+	return delegated
 })
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)

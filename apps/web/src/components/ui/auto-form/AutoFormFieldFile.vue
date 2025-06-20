@@ -1,7 +1,13 @@
 <script setup lang="ts">
 import type { FieldProps } from './interface'
 import { Button } from '@/components/ui/button'
-import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/components/ui/form'
+import {
+	FormControl,
+	FormDescription,
+	FormField,
+	FormItem,
+	FormMessage,
+} from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { TrashIcon } from 'lucide-vue-next'
 import { ref } from 'vue'
@@ -12,18 +18,18 @@ defineProps<FieldProps>()
 
 const inputFile = ref<File>()
 async function parseFileAsString(file: File | undefined): Promise<string> {
-  return new Promise((resolve, reject) => {
-    if (file) {
-      const reader = new FileReader()
-      reader.onloadend = () => {
-        resolve(reader.result as string)
-      }
-      reader.onerror = (err) => {
-        reject(err)
-      }
-      reader.readAsDataURL(file)
-    }
-  })
+	return new Promise((resolve, reject) => {
+		if (file) {
+			const reader = new FileReader()
+			reader.onloadend = () => {
+				resolve(reader.result as string)
+			}
+			reader.onerror = (err) => {
+				reject(err)
+			}
+			reader.readAsDataURL(file)
+		}
+	})
 }
 </script>
 

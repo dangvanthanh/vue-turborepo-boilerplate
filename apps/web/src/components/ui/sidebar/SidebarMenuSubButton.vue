@@ -4,14 +4,19 @@ import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 import { Primitive } from 'radix-vue'
 
-const props = withDefaults(defineProps<PrimitiveProps & {
-  size?: 'sm' | 'md'
-  isActive?: boolean
-  class?: HTMLAttributes['class']
-}>(), {
-  as: 'a',
-  size: 'md',
-})
+const props = withDefaults(
+	defineProps<
+		PrimitiveProps & {
+			size?: 'sm' | 'md'
+			isActive?: boolean
+			class?: HTMLAttributes['class']
+		}
+	>(),
+	{
+		as: 'a',
+		size: 'md',
+	},
+)
 </script>
 
 <template>

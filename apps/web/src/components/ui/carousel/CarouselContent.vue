@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils'
 import { useCarousel } from './useCarousel'
 
 defineOptions({
-  inheritAttrs: false,
+	inheritAttrs: false,
 })
 
 const props = defineProps<WithClassAsProps>()

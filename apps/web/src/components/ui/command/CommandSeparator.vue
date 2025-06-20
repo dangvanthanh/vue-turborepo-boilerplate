@@ -4,12 +4,14 @@ import { cn } from '@/lib/utils'
 import { ComboboxSeparator } from 'radix-vue'
 import { computed, type HTMLAttributes } from 'vue'
 
-const props = defineProps<ComboboxSeparatorProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+	ComboboxSeparatorProps & { class?: HTMLAttributes['class'] }
+>()
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+	const { class: _, ...delegated } = props
 
-  return delegated
+	return delegated
 })
 </script>
 

@@ -1,6 +1,10 @@
 {
-	"extends": ["@repo/biome-config/biome"],
+	"extends": [
+		"@repo/biome-config/biome"
+	],
 	"files": {
-		"ignore": ["./public/mockServiceWorker.js"]
+		"includes": [
+			"!./public/mockServiceWorker.js"
+		]
 	}
 }

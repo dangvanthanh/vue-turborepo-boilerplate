@@ -4,7 +4,7 @@ import { useForwardPropsEmits } from 'radix-vue'
 import { DrawerRoot } from 'vaul-vue'
 
 const props = withDefaults(defineProps<DrawerRootProps>(), {
-  shouldScaleBackground: true,
+	shouldScaleBackground: true,
 })
 
 const emits = defineEmits<DrawerRootEmits>()

@@ -2,26 +2,33 @@
 import type { toggleVariants } from '@/components/ui/toggle'
 import type { VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
-import { ToggleGroupRoot, type ToggleGroupRootEmits, type ToggleGroupRootProps, useForwardPropsEmits } from 'radix-vue'
+import {
+	ToggleGroupRoot,
+	type ToggleGroupRootEmits,
+	type ToggleGroupRootProps,
+	useForwardPropsEmits,
+} from 'radix-vue'
 import { computed, type HTMLAttributes, provide } from 'vue'
 
 type ToggleGroupVariants = VariantProps<typeof toggleVariants>
 
-const props = defineProps<ToggleGroupRootProps & {
-  class?: HTMLAttributes['class']
-  variant?: ToggleGroupVariants['variant']
-  size?: ToggleGroupVariants['size']
-}>()
+const props = defineProps<
+	ToggleGroupRootProps & {
+		class?: HTMLAttributes['class']
+		variant?: ToggleGroupVariants['variant']
+		size?: ToggleGroupVariants['size']
+	}
+>()
 const emits = defineEmits<ToggleGroupRootEmits>()
 
 provide('toggleGroup', {
-  variant: props.variant,
-  size: props.size,
+	variant: props.variant,
+	size: props.size,
 })
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-  return delegated
+	const { class: _, ...delegated } = props
+	return delegated
 })
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)

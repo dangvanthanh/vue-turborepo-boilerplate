@@ -6,19 +6,22 @@ import { cn } from '@/lib/utils'
 import { SIDEBAR_WIDTH_MOBILE, useSidebar } from './utils'
 
 defineOptions({
-  inheritAttrs: false,
+	inheritAttrs: false,
 })
 
-const props = withDefaults(defineProps<{
-  side?: 'left' | 'right'
-  variant?: 'sidebar' | 'floating' | 'inset'
-  collapsible?: 'offcanvas' | 'icon' | 'none'
-  class?: HTMLAttributes['class']
-}>(), {
-  side: 'left',
-  variant: 'sidebar',
-  collapsible: 'offcanvas',
-})
+const props = withDefaults(
+	defineProps<{
+		side?: 'left' | 'right'
+		variant?: 'sidebar' | 'floating' | 'inset'
+		collapsible?: 'offcanvas' | 'icon' | 'none'
+		class?: HTMLAttributes['class']
+	}>(),
+	{
+		side: 'left',
+		variant: 'sidebar',
+		collapsible: 'offcanvas',
+	},
+)
 
 const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
 </script>

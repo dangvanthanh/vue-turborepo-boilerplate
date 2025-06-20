@@ -6,7 +6,7 @@ export type CookieOptions = {
 	domain?: string
 	secure?: boolean
 	sameSite?: 'lax' | 'strict' | 'none'
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+	// biome-ignore lint/suspicious/noExplicitAny: any type
 	[property: string]: any
 }
 

@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils'
 import { MoreHorizontal } from 'lucide-vue-next'
 
 const props = defineProps<{
-  class?: HTMLAttributes['class']
+	class?: HTMLAttributes['class']
 }>()
 </script>
 

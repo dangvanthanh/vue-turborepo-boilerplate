@@ -5,12 +5,14 @@ import { Plus } from 'lucide-vue-next'
 import { NumberFieldIncrement, useForwardProps } from 'radix-vue'
 import { computed, type HTMLAttributes } from 'vue'
 
-const props = defineProps<NumberFieldIncrementProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+	NumberFieldIncrementProps & { class?: HTMLAttributes['class'] }
+>()
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+	const { class: _, ...delegated } = props
 
-  return delegated
+	return delegated
 })
 
 const forwarded = useForwardProps(delegatedProps)

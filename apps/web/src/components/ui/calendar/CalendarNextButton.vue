@@ -2,15 +2,21 @@
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { ChevronRight } from 'lucide-vue-next'
-import { CalendarNext, type CalendarNextProps, useForwardProps } from 'radix-vue'
+import {
+	CalendarNext,
+	type CalendarNextProps,
+	useForwardProps,
+} from 'radix-vue'
 import { computed, type HTMLAttributes } from 'vue'
 
-const props = defineProps<CalendarNextProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+	CalendarNextProps & { class?: HTMLAttributes['class'] }
+>()
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+	const { class: _, ...delegated } = props
 
-  return delegated
+	return delegated
 })
 
 const forwardedProps = useForwardProps(delegatedProps)
