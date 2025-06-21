@@ -9,6 +9,7 @@
 		"dev": "vite",
 		"build": "vite build",
 		"preview": "vite preview",
+		"lint": "biome lint",
 		"format": "biome format ./src --write",
 		"update": "bunx npm-check-updates -ui",
 		"lingui:extract": "lingui extract --clean",

@@ -2,6 +2,11 @@
 	"extends": [
 		"@repo/biome-config/biome"
 	],
+	"linter": {
+		"includes": [
+			"!./src/components/ui/**"
+		]
+	},
 	"files": {
 		"includes": [
 			"!./public/mockServiceWorker.js"
