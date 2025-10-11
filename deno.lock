@@ -44,10 +44,10 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
-        "npm:@types/node@^24.0.3",
+        "npm:@types/node@^24.7.1",
         "npm:husky@^9.1.7",
-        "npm:lint-staged@^16.1.2",
-        "npm:turbo@^2.5.4"
+        "npm:lint-staged@^16.2.3",
+        "npm:turbo@^2.5.8"
       ]
     },
     "members": {
@@ -59,52 +59,52 @@
       "apps/web": {
         "packageJson": {
           "dependencies": [
-            "npm:@lingui/cli@^5.3.2",
-            "npm:@lingui/extractor-vue@^5.3.2",
-            "npm:@lingui/macro@^5.3.2",
-            "npm:@lingui/vite-plugin@^5.3.2",
-            "npm:@tailwindcss/postcss@^4.1.10",
+            "npm:@lingui/cli@^5.5.1",
+            "npm:@lingui/extractor-vue@^5.5.1",
+            "npm:@lingui/macro@^5.5.1",
+            "npm:@lingui/vite-plugin@^5.5.1",
+            "npm:@tailwindcss/postcss@^4.1.14",
             "npm:@types/lodash-es@^4.17.12",
-            "npm:@unovis/ts@^1.5.2",
-            "npm:@unovis/vue@^1.5.2",
+            "npm:@unovis/ts@^1.6.1",
+            "npm:@unovis/vue@^1.6.1",
             "npm:@vee-validate/zod@^4.15.1",
-            "npm:@vitejs/plugin-vue@^5.2.4",
-            "npm:@vueuse/core@^13.4.0",
+            "npm:@vitejs/plugin-vue@^6.0.1",
+            "npm:@vueuse/core@^13.9.0",
             "npm:class-variance-authority@~0.7.1",
             "npm:clsx@^2.1.1",
             "npm:date-fns@^4.1.0",
             "npm:embla-carousel-vue@^8.6.0",
             "npm:embla-carousel@^8.6.0",
             "npm:lodash-es@^4.17.21",
-            "npm:lucide-vue-next@0.518",
-            "npm:msw@^2.10.2",
+            "npm:lucide-vue-next@0.545",
+            "npm:msw@^2.11.5",
             "npm:pinia@^3.0.3",
             "npm:radix-vue@^1.9.17",
-            "npm:rxdb@^16.15.0",
+            "npm:rxdb@^16.19.1",
             "npm:rxjs@^7.8.2",
             "npm:swrv@^1.1.0",
             "npm:tailwind-merge@^3.3.1",
             "npm:tailwindcss-animate@^1.0.7",
-            "npm:tailwindcss@^4.1.10",
-            "npm:typescript@^5.8.3",
-            "npm:unplugin-vue-router@0.12",
+            "npm:tailwindcss@^4.1.14",
+            "npm:typescript@^5.9.3",
+            "npm:unplugin-vue-router@0.15",
             "npm:v-calendar@^3.1.2",
             "npm:vaul-vue@~0.4.1",
             "npm:vee-validate@^4.15.1",
             "npm:vite-plugin-babel-macros@^1.0.6",
-            "npm:vite@^6.3.5",
+            "npm:vite@^7.1.9",
             "npm:vue-router@^4.5.1",
-            "npm:vue-sonner@2",
-            "npm:vue-tsc@^2.2.10",
-            "npm:vue@^3.5.17",
-            "npm:zod@^3.25.67"
+            "npm:vue-sonner@^2.0.9",
+            "npm:vue-tsc@^3.1.1",
+            "npm:vue@^3.5.22",
+            "npm:zod@^4.1.12"
           ]
         }
       },
       "packages/biome-config": {
         "packageJson": {
           "dependencies": [
-            "npm:@biomejs/biome@2.0.0"
+            "npm:@biomejs/biome@2.2.5"
           ]
         }
       },
@@ -113,8 +113,8 @@
           "dependencies": [
             "npm:@types/js-cookie@^3.0.6",
             "npm:js-cookie@^3.0.5",
-            "npm:tsup@^8.4.0",
-            "npm:typescript@^5.8.3"
+            "npm:tsup@^8.5.0",
+            "npm:typescript@^5.9.3"
           ]
         }
       }
