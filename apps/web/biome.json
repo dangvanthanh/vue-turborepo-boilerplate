@@ -9,7 +9,8 @@
 	},
 	"files": {
 		"includes": [
-			"!./public/mockServiceWorker.js"
+			"!./public/mockServiceWorker.js",
+			"!./src/**/*.css"
 		]
 	}
 }
