@@ -1,16 +1,27 @@
 {
-	"extends": [
-		"@repo/biome-config/biome"
-	],
+	"extends": ["@repo/biome-config/biome"],
 	"linter": {
-		"includes": [
-			"!./src/components/ui/**"
-		]
+		"includes": ["!./src/components/ui/**"]
 	},
 	"files": {
-		"includes": [
-			"!./public/mockServiceWorker.js",
-			"!./src/**/*.css"
-		]
-	}
+		"includes": ["!./public/mockServiceWorker.js", "!./src/**/*.css"]
+	},
+	"overrides": [
+		{
+			"includes": ["**/*.vue"],
+			"linter": {
+				"rules": {
+					"style": {
+						"useConst": "off",
+						"useImportType": "off"
+					},
+					"correctness": {
+						"noUnusedVariables": "off",
+						"noUnusedImports": "off",
+						"useHookAtTopLevel": "off"
+					}
+				}
+			}
+		}
+	]
 }

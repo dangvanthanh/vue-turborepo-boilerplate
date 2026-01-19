@@ -8,10 +8,12 @@
 			"outputs": ["build/**", "dist/**"]
 		},
 		"lint": {
-			"dependsOn": ["^lint"]
+			"dependsOn": ["^lint"],
+			"cache": false
 		},
 		"format": {
-			"dependsOn": ["^format"]
+			"dependsOn": ["^format"],
+			"cache": false
 		},
 		"update": {
 			"dependsOn": ["^update"]
